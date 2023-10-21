@@ -6,53 +6,31 @@
     <title>Testing in js</title>
 </head>
 <body>
-    <!--
-        A(t): Testing element operations
-        B(t): Testing a function
-        1.  [].forEach
-        2.  const n = []
-            for (let i = 0; i < n.length; ++i)
-        3.  const n = []
-            let i = 0
-            while (i < n.length)
+    <script>
+        function test_named() {}
 
-        A(t): If variable can have multiple values
-        B(t): If variables can have same value
-        1.  condition ? if-true : if-false
-        2.  if (condition)
-                if-true
-            else
-                if-false
-        3.  switch (expression) {
-                case (condition):
-                    if-true
-                default:
-                    if-false
-            }
+        const test_anon = function() {}
 
-        A(t): Get vowel count
-        1.  function getCount(str) {
-                const matches = str.match(/[aeiou]/g)
-                return matches ? matches.length : 0
-            }
-        2.  const vowelTest = []
-            for (let i = 'a'.charCodeAt(0); i <= 'z'.charCodeAt(0); ++i) {
-                vowelTest[i] = 'aeiou'.includes(String.fromCharCode(i))
-                vowelTest[''.charCodeAt(0)]
-            }
-            function getCount(str) {
-                let result = 0
-                for (let i = 0; i < str.length; ++i) {
-                    vowelTest[str.charCodeAt(i)] ? result++ : 0
-                }
-                return result
-            }
+        const test_arrow = () => {}
 
-        A(t):
-        1.  Promises
-        2.  Async and await
-        3.  Callbacks
-    -->
-    <script></script>
+        /* Function */
+        [100, 1000, 10000, 100000, 1000000].forEach()
+
+        const n_e = [100, 1000, 10000, 100000, 1000000]
+        for (let i = 0; i < n_e.length; ++i) {}
+
+        let i = 0;
+        while (i < n_e.length) {}
+    </script>
+    <script>
+        /* Element operations */
+        [100, 1000, 10000, 100000, 1000000].forEach()
+
+        const n_f = [100, 1000, 10000, 100000, 1000000]
+        for (let i = 0; i < n_f.length; ++i) {}
+
+        let j = 0;
+        while (i < n_f.length) {}
+    </script>
 </body>
 </html>
