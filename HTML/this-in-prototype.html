@@ -112,5 +112,16 @@
         a_c.calc()
     </script>
     <!-- Originally, I created two constructors, Proto1 and Proto2. Proto1 used arrowfunc notation, while Proto2 used namedfunc notation. Each had ofArrow and ofFunc, as well as equalsArrow and equalsFunc, but an error kept appearing declaring that ofArrow for Proto1 was not a function. When commented out, ofFunc was not a function either. Commenting out Proto1, I got the same error for Proto2. I tried rearranging when the console.log were printing the instances and their results to first behind the declarations, then interspersed with the instances. There was a point that ofArrow and ofFunc worked, removing .prototype. from the declaration. -->
+    <script>
+        const ProtoFields = function() {
+            this.__val = 1
+        }
+        ProtoFields.prototype.get = function() { return this.__val }
+        ProtoFields.prototype.field = 2
+
+        const pf = new ProtoFields()
+        console.log(pf.get())
+        console.log(pf.field)
+    </script>
 </body>
 </html>
