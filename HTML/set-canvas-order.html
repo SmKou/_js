@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Set Canvas Order</title>
+    <style>
+        #app { border: 1px solid black }
+    </style>
+</head>
+<body>
+    <canvas id="app"></canvas>
+    <button id="toggle">Tog</button>
+    <script>
+        const cvs = document.getElementById('app')
+        const ctx = cvs.getContext('2d')
+
+        ctx.fillStyle = '#f00'
+        ctx.fillRect(cvs.width / 2, cvs.height / 2, cvs.width / 2, cvs.height / 2)
+
+        document.getElementById('toggle').addEventListener('click', () => {
+            cvs.width = 600
+            cvs.height = 300
+    
+            ctx.fillStyle = '#000'
+            ctx.fillRect(cvs.width / 2, cvs.height / 2, cvs.width / 2, cvs.height / 2)
+        })
+
+    </script>
+</body>
+</html>
